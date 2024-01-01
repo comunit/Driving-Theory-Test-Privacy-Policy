@@ -110,7 +110,7 @@
 
 <div class="contact-support">
     <h2>Contact Support</h2>
-    <form action="#" method="post" action="https://forms.un-static.com/forms/58f8fc3bf8864eea04b350d3d5d0875f4be5640d">
+    <form method="post" action="https://forms.un-static.com/forms/58f8fc3bf8864eea04b350d3d5d0875f4be5640d">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
@@ -138,17 +138,11 @@
     const message = document.querySelector('#message');
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
+
         if (!name.value || !email.value || !message.value) {
             e.preventDefault();
             alert('Please fill out all the fields');
-        } else {
-            alert('Your message has been sent');
-            // clear the form
-            name.value = '';
-            email.value = '';
-            message.value = '';
-        }
+        } 
     });
 </script>
 
